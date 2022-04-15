@@ -2,7 +2,7 @@
     <string name="app_name">Rack gear cutter design app</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
+    <string name="first_fragment_label">Rack cutter: Initial Data</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -18,14 +18,26 @@
     <string name="textType">Type:</string>
     <string name="textClass">Class:</string>
     <string name="textMillimeter">mm</string>
-    <string name="textAngle">"°"</string>
-    <string name="textFirstType">1 type</string>
-    <string name="textSecondType">2 type</string>
+    <string name="textAngle">°</string>
+    <string name="textFirstType">Type 1</string>
+    <string name="textSecondType">Type 2</string>
     <string name="textClassA">A</string>
     <string name="textClassB">B</string>
     <string name="buttonCalculate">Calculate</string>
     <string name="menuReset">Reset</string>
     <string name="menuAbout">About</string>
-    
+    <string name="textAbout">"Program for calculating the Rack gear cutter.
+Created by: st. gr. TOM-12 Babichev I.L.
+Under the direction of: Denisova N.A.
+DonSTU, Department of technology and organization of machine-building production.
+Alchevsk, 2016
+Porting to Android:
+Kharkiv, 2022"</string>
+    <string name="r1_profileAngle">1. Profile angle α<sub>i</sub> = %1$s mm;\n</string>
+    <string name="r2_rackPitch">2. Rack pitch t = %1$s mm;</string>
+    <string name="r3_toothThickness">3. Tooth thickness S = %1$s mm;</string>
+    <string name="r4_heightToothHead">4. The height of the rack tooth head h<sub>h</sub> = %1$s mm;</string>
+    <string name="r5_heightToothStem">5. The height of the rack tooth stem h<sub>s</sub> = %1$s mm;</string>
+    <string name="r6_heightToothTotal">6. Total comb tooth height h = %1$s mm;</string>
 
 </resources>

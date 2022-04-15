@@ -19,23 +19,288 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
 
             <TextView
+                android:id="@+id/textInitialData"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/allMargin"
+                android:text="@string/textInitialData"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold"
+                android:background="@color/background_data"
+                android:textColor="@color/black"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeModule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInitialData"
+                android:layout_marginStart="@dimen/allMargin"
+                android:layout_marginTop="@dimen/allMargin"
+                android:layout_marginEnd="@dimen/allMargin"
+                android:layout_marginBottom="@dimen/allMargin"
+                android:background="@color/background_data"
+                android:orientation="horizontal"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/textGearModule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textGearModule"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/editTextGearModule"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/allMargin"
+                    android:layout_marginTop="@dimen/allMargin"
+
+                    android:layout_marginEnd="@dimen/allMargin"
+                    android:layout_marginBottom="@dimen/allMargin"
+                    android:layout_toEndOf="@+id/textGearModule"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/editTextGearModule"
+                    android:text="@string/textMillimeter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize" />
 
 
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeModule"
+                android:layout_margin="@dimen/allMargin"
+                android:orientation="horizontal"
+                android:background="@color/background_data">
+
+                <TextView
+                    android:id="@+id/textAngle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textAngleEngagement"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextAngle"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/allMargin"
+                    android:layout_toEndOf="@+id/textAngle"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/editTextAngle"
+                    android:text="@string/textAngle"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"/>
 
 
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeClearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeAngle"
+                android:layout_margin="@dimen/allMargin"
+                android:orientation="horizontal"
+                android:background="@color/background_data">
+
+                <TextView
+                    android:id="@+id/textClearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textRadialClearance"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextClearance"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/allMargin"
+                    android:layout_toEndOf="@+id/textClearance"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/editTextClearance"
+                    android:text="@string/textMillimeter"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"/>
 
 
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeDiameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeClearance"
+                android:layout_margin="@dimen/allMargin"
+                android:orientation="horizontal"
+                android:background="@color/background_data">
+
+                <TextView
+                    android:id="@+id/textDiameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textGearWheelDiameter"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextDiameter"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/allMargin"
+                    android:layout_toEndOf="@+id/textDiameter"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/editTextDiameter"
+                    android:text="@string/textMillimeter"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeDiameter"
+                android:layout_margin="@dimen/allMargin"
+                android:orientation="horizontal"
+                android:background="@color/background_data">
+
+                <TextView
+                    android:id="@+id/textType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textType"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textType"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/allMargin">
+
+                    <RadioButton
+                        android:id="@+id/radioType1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textFirstType"
+                        android:textSize="@dimen/textSize"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioType2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textSecondType"
+                        android:textSize="@dimen/textSize" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeType"
+                android:layout_margin="@dimen/allMargin"
+                android:orientation="horizontal"
+                android:background="@color/background_data">
+
+                <TextView
+                    android:id="@+id/textClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textClass"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/black"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textClass"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/allMargin">
+
+                    <RadioButton
+                        android:id="@+id/radioClassA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textClassA"
+                        android:textSize="@dimen/textSize"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioClassB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textClassB"
+                        android:textSize="@dimen/textSize" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeClass"
+                android:layout_margin="@dimen/allMargin"
+                android:text="@string/buttonCalculate"
+                android:padding="10dp"
+                android:background="@color/buttonColor"
+                />
 
 
         </RelativeLayout>
-
 
 
     </ScrollView>
