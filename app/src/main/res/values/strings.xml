@@ -53,6 +53,341 @@ Kharkiv, 2022"</string>
     <string name="r4_heightToothHead">4. The height of the rack tooth head h<![CDATA[<sub><small>h</small></sub>]]> = %1$s mm;\n</string>
     <string name="r5_heightToothStem">5. The height of the rack tooth stem h<![CDATA[<sub><small>s</small></sub>]]> = %1$s mm;\n </string>
     <string name="r6_heightToothTotal">6. Total comb tooth height h = %1$s mm;\n</string>
+    <string name="r7_heightToothTop">7. Tooth thickness at the top of the comb S<![CDATA[<sub><small>t</small></sub>]]> = %1$s mm;</string>
+    <string name="r8_flankingAngle">8. Flanking angle α\'<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm;</string>
+    <string name="r9_distance">9. Distance from the dividing line to the beginning of flanking:<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;&nbsp;- the distance from the dividing line to the beginning of flanking in the main plane h<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm,<![CDATA[<br>]]>
+        Distance from dividing line to the beginning of flanking h\'<![CDATA[<sub><small>f</small></sub>]]> = 1.361 mm;</string>
+    <string name="r10_widthBetweenTeeth">10. Width of the cavity between the teeth at the beginning of flanking S<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm;</string>
+    <string name="r11_profileAngle"><![CDATA[<b>Calculation of tooth profile in normal plane.</b><br>]]>
+        11. Profile angle α<![CDATA[<sub><small>iN</small></sub>]]> = %1$s°;</string>
+    <string name="r12_toothHeadHeight">12. Tooth head height h\'<![CDATA[<sub><small>N</small></sub>]]> = %1$s mm;</string>
+    <string name="r13_toothFootHeight">13. Height of tooth foot h\'\'<![CDATA[<sub><small>N</small></sub>]]> = %1$s mm;</string>
+    <string name="r14_toothHeightTotal">14. Total tooth height h<![CDATA[<sub><small>N</small></sub>]]> = %1$s mm;</string>
+    <string name="r15_radiusTopTooth">15. The radius of rounding of the tops of the teeth r<![CDATA[<sub><small>1</small></sub>]]> = %1$s mm;</string>
+    <string name="r16_radiusDepressions">16. Radius of rounding of depressions r<![CDATA[<sub><small>2</small></sub>]]> = %1$s mm;</string>
+    <string name="r17_diameterCalibre">17. Diameter of the calibre to control the tooth thickness of the comb d = %1$s mm;</string>
+    <string name="r18_moduleNotStandard">The selected module is not standard. The design dimensions can only be obtained for standard modules.</string>
+    <string name="r18_moduleStandard"><![CDATA[<b>Design dimensions of the toothbrush:</b><br>]]>
+        &nbsp;&nbsp;&nbsp;t = %1$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;H = %2$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;B = %3$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;L = %4$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;Z = %5$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;a = %6$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;a<![CDATA[<sub><small>1</small></sub>]]>  = %7$s mm,<![CDATA[<br>]]>
+        &nbsp;&nbsp;&nbsp;K = %8$s mm;<![CDATA[<br>]]></string>
+    <string name="r19_sharpeningAngle"><![CDATA[<b>Definition of sharpening angles:</b><br>]]>
+        Side rear angle α<![CDATA[<sub><small>b</small></sub>]]> = %1$s°;<![CDATA[<br>]]>
+        Front angle on side cutting edges γ<![CDATA[<sub><small>1</small></sub>]]> = %1$s°;</string>
+    <string name="r19_bigModule">Since the module is larger than 10 mm we use a second sharpening method.<![CDATA[<br>]]>
+        Circle diameter D = %1%s mm;<![CDATA[<br>]]>
+        Groove width b = %2$s mm;<![CDATA[<br>]]>
+        Front grinding angle γ = %3$s°; <![CDATA[<br>]]>
+        Total angle γ<![CDATA[<sub><small>c</small></sub>]]> = %4$s°; <![CDATA[<br>]]></string>
+    
+    
+    
+    <string-array name="r18_standardModule">
+        <item>1</item>
+        <item>1.25</item>
+        <item>1.5</item>
+        <item>1.75</item>
+        <item>2</item>
+        <item>2.25</item>
+        <item>2.5</item>
+        <item>2.75</item>
+        <item>3</item>
+        <item>3.25</item>
+        <item>3.5</item>
+        <item>3.75</item>
+        <item>4</item>
+        <item>4.25</item>
+        <item>4.5</item>
+        <item>5</item>
+        <item>5.5</item>
+        <item>6</item>
+        <item>6.5</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="r18_t">
+        <item>3.142</item>
+        <item>3.927</item>
+        <item>4.712</item>
+        <item>5.498</item>
+        <item>6.283</item>
+        <item>7.069</item>
+        <item>7.854</item>
+        <item>8.639</item>
+        <item>9.425</item>
+        <item>10.210</item>
+        <item>10.996</item>
+        <item>11.781</item>
+        <item>12.566</item>
+        <item>13.352</item>
+        <item>14.137</item>
+        <item>15.708</item>
+        <item>17.279</item>
+        <item>18.850</item>
+        <item>20.420</item>
+        <item>21.991</item>
+        <item>25.133</item>
+        <item>28.274</item>
+        <item>31.416</item>
+        <item>34.557</item>
+        <item>37.699</item>
+        <item>40.841</item>
+        <item>43.982</item>
+        <item>47.124</item>
+        <item>50.265</item>
+        <item>56.549</item>
+        <item>62.832</item>
+    </string-array>
+    <string-array name="r18_H">
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>60</item>
+        <item>60</item>
+        <item>60</item>
+        <item>60</item>
+        <item>60</item>
+        <item>70</item>
+        <item>70</item>
+        <item>70</item>
+        <item>70</item>
+        <item>80</item>
+        <item>80</item>
+        <item>80</item>
+        <item>80</item>
+        <item>90</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="r18_B">
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>20</item>
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="r18_L">
+        <item>77</item>
+        <item>80</item>
+        <item>81</item>
+        <item>83</item>
+        <item>82</item>
+        <item>85</item>
+        <item>87</item>
+        <item>96</item>
+        <item>95</item>
+        <item>103</item>
+        <item>110</item>
+        <item>106</item>
+        <item>113</item>
+        <item>121</item>
+        <item>128</item>
+        <item>126</item>
+        <item>137</item>
+        <item>150</item>
+        <item>165</item>
+        <item>177</item>
+        <item>177</item>
+        <item>170</item>
+        <item>188</item>
+        <item>208</item>
+        <item>226</item>
+        <item>245</item>
+        <item>220</item>
+        <item>236</item>
+        <item>251</item>
+        <item>281</item>
+        <item>311</item>
+    </string-array>
+    <string-array name="r18_Z">
+        <item>24</item>
+        <item>20</item>
+        <item>17</item>
+        <item>15</item>
+        <item>13</item>
+        <item>12</item>
+        <item>11</item>
+        <item>11</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>9</item>
+        <item>9</item>
+        <item>9</item>
+        <item>9</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>7</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="r18_a">
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>16</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>18</item>
+        <item>20</item>
+        <item>20</item>
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+        <item>24</item>
+        <item>24</item>
+        <item>26</item>
+        <item>26</item>
+        <item>28</item>
+        <item>28</item>
+        <item>32</item>
+        <item>34</item>
+        <item>35</item>
+        <item>37</item>
+        <item>40</item>
+        <item>42</item>
+        <item>44</item>
+        <item>47</item>
+        <item>50</item>
+        <item>52</item>
+        <item>56</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="r18_a1">
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>9</item>
+        <item>10</item>
+        <item>10</item>
+        <item>11</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>14</item>
+        <item>15</item>
+        <item>15</item>
+        <item>16</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>23</item>
+        <item>26</item>
+        <item>29</item>
+        <item>31</item>
+        <item>33</item>
+        <item>36</item>
+        <item>37</item>
+        <item>40</item>
+        <item>43</item>
+        <item>48</item>
+        <item>52</item>
+    </string-array>
+    <string-array name="r18_K">
+        <item>0.5</item>
+        <item>0.5</item>
+        <item>0.5</item>
+        <item>0.5</item>
+        <item>0.5</item>
+        <item>0.5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1.5</item>
+        <item>1.5</item>
+        <item>1.5</item>
+        <item>1.5</item>
+        <item>1.5</item>
+        <item>2.5</item>
+        <item>2.5</item>
+        <item>2.5</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+    </string-array>
+
+
+
 
 
 </resources>
