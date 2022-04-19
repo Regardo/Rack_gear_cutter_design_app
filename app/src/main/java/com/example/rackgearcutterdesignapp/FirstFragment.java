@@ -173,6 +173,166 @@ public class FirstFragment extends Fragment {
 
         resultCalculation = resultCalculation + getString(R.string.r6_heightToothTotal, r6_h + "") + getString(R.string.textRN);
 
+        //--------------------
+        //7. Толщина зуба по вершине гребенки
+        //--------------------
+
+        float r7_Sv = getTrunc(r3_S - 2 * r4_hg * Math.tan(Math.toRadians(r1_ai)), 1000);
+
+        resultCalculation = resultCalculation + getString(R.string.r7_heightToothTop, r7_Sv + "") + getString(R.string.textRN);
+
+        //--------------------
+        //8. Угол фланкирования
+        //--------------------
+
+        float r8_alfaF = 0;
+        if (classA){
+            if (m_gearModule <= 2) r8_alfaF = 1.67f;
+            else if (m_gearModule <= 3.5) r8_alfaF = 1.33f;
+            else if (m_gearModule <= 5) r8_alfaF = 1.12f;
+            else if (m_gearModule <= 7) r8_alfaF = 1;
+            else if (m_gearModule <= 11) r8_alfaF = 0.9f;
+            else if (m_gearModule <= 20) r8_alfaF = 0.67f;
+        }
+        else {
+            if (m_gearModule <= 2.75) r8_alfaF = 2.22f;
+            else if (m_gearModule <= 4.25) r8_alfaF = 1.92f;
+            else if (m_gearModule <= 5) r8_alfaF = 1.67f;
+            else if (m_gearModule <= 9) r8_alfaF = 1.33f;
+            else if (m_gearModule <= 20) r8_alfaF = 1.12f;
+        }
+        float r8_alfa1F = getTrunc(Math.atan(Math.tan(Math.toRadians(r8_alfaF)) * Math.cos(Math.toRadians(r1_Y))), 100);
+
+        resultCalculation = resultCalculation + getString(R.string.r8_flankingAngle, r8_alfa1F + "") + getString(R.string.textRN);
+
+        //--------------------
+        //9. Расстояние от делительной прямой до начала фланкирования
+        //--------------------
+
+        float r9_1delta = 0;
+        float r9_2delta = 0;
+        if (D_gearDiameter >=40 && D_gearDiameter <= 100) {
+            if (m_gearModule <= 2.25) {r9_1delta = 70; r9_2delta = 50;}
+            else if (m_gearModule <= 4) {r9_1delta = 80; r9_2delta = 50;}
+            else if (m_gearModule <= 6) {r9_1delta = 70; r9_2delta = 50;}
+            else if (m_gearModule <= 8) {r9_1delta = 90; r9_2delta = 60;}
+            else if (m_gearModule <= 10) {r9_1delta = 110; r9_2delta = 60;}
+        }
+        else if (D_gearDiameter > 100 && D_gearDiameter <= 200) {
+            if (m_gearModule <= 2.25) {r9_1delta = 90; r9_2delta = 50;}
+            else if (m_gearModule <= 4) {r9_1delta = 90; r9_2delta = 60;}
+            else if (m_gearModule <= 6) {r9_1delta = 100; r9_2delta = 60;}
+            else if (m_gearModule <= 8) {r9_1delta = 110; r9_2delta = 70;}
+            else if (m_gearModule <= 10) {r9_1delta = 110; r9_2delta = 70;}
+            else if (m_gearModule <= 14) {r9_1delta = 120; r9_2delta = 70;}
+            else if (m_gearModule <= 20) {r9_1delta = 140; r9_2delta = 80;}
+        }
+        else if (D_gearDiameter > 200 && D_gearDiameter <= 400) {
+            if (m_gearModule <= 2.25) {r9_1delta = 130; r9_2delta = 60;}
+            else if (m_gearModule <= 4) {r9_1delta = 130; r9_2delta = 70;}
+            else if (m_gearModule <= 6) {r9_1delta = 130; r9_2delta = 70;}
+            else if (m_gearModule <= 8) {r9_1delta = 140; r9_2delta = 80;}
+            else if (m_gearModule <= 10) {r9_1delta = 140; r9_2delta = 80;}
+            else if (m_gearModule <= 14) {r9_1delta = 150; r9_2delta = 80;}
+            else if (m_gearModule <= 20) {r9_1delta = 170; r9_2delta = 90;}
+        }
+        else if (D_gearDiameter > 400 && D_gearDiameter <= 800) {
+            if (m_gearModule <= 2.25) {r9_1delta = 190; r9_2delta = 80;}
+            else if (m_gearModule <= 4) {r9_1delta = 190; r9_2delta = 90;}
+            else if (m_gearModule <= 6) {r9_1delta = 200; r9_2delta = 90;}
+            else if (m_gearModule <= 8) {r9_1delta = 200; r9_2delta = 90;}
+            else if (m_gearModule <= 10) {r9_1delta = 210; r9_2delta = 100;}
+            else if (m_gearModule <= 14) {r9_1delta = 220; r9_2delta = 110;}
+            else if (m_gearModule <= 20) {r9_1delta = 230; r9_2delta = 110;}
+        }
+        else if (D_gearDiameter > 800 && D_gearDiameter <= 1200) {
+            if (m_gearModule <= 4) {r9_1delta = 260; r9_2delta = 110;}
+            else if (m_gearModule <= 6) {r9_1delta = 260; r9_2delta = 120;}
+            else if (m_gearModule <= 8) {r9_1delta = 260; r9_2delta = 120;}
+            else if (m_gearModule <= 10) {r9_1delta = 270; r9_2delta = 130;}
+            else if (m_gearModule <= 14) {r9_1delta = 280; r9_2delta = 130;}
+            else if (m_gearModule <= 20) {r9_1delta = 290; r9_2delta = 140;}
+        }
+
+        float r9_hf = getTrunc((0.55 * m_gearModule) + (r9_1delta / 1000) + ((r9_2delta / 1000) / 2), 1000);
+        float r9_hf1 = getTrunc(r9_hf / Math.cos(Math.toRadians(r1_Y)), 1000);
+
+        resultCalculation = resultCalculation + getString(R.string.r9_distance, r9_hf + "", r9_hf1 +  "") + getString(R.string.textRN);
+
+        //------------------
+        //10. Ширина впадины между зубьями в начале фланкирования
+        //------------------
+
+        float r10_Sf = r2_t - r3_S - getTrunc(2 * r9_hf * getTrunc(Math.tan(Math.toRadians(a_angleEngagement)), 100000), 1000);
+
+        resultCalculation = resultCalculation + getString(R.string.r10_widthBetweenTeeth, r10_Sf + "") + getString(R.string.textRN);
+
+        //-----------------
+        //11. Угол профиля
+        //-----------------
+
+        float r11_av = 0;
+        if (type) r11_av = 5.5f;
+        else r11_av = 6.87f;
+        float r11_aiN = getTrunc( Math.toDegrees(Math.atan(getTrunc((Math.tan(Math.toRadians(a_angleEngagement)) * Math.cos(Math.toRadians(r1_Y))) / Math.cos(Math.toRadians(r1_Y + r11_av)), 1000 ))), 100);
+
+        resultCalculation = resultCalculation + getString(R.string.r11_profileAngle, r11_aiN + "") + getString(R.string.textRN);
+
+        //------------------
+        //12. Высота головки зуба
+        //------------------
+
+        float r12_h1N = getTrunc((r5_hn * Math.cos(Math.toRadians(r1_Y + r11_av))) / Math.cos(Math.toRadians(r1_Y)), 100);
+
+        resultCalculation = resultCalculation + getString(R.string.r12_toothHeadHeight, r12_h1N + "") + getString(R.string.textRN);
+
+        //------------------
+        //13. Высота ножки зуба
+        //------------------
+
+        float r13_h2N = getTrunc(((r4_hg + r5_delta) * Math.cos(Math.toRadians(r1_Y + r11_av))) / Math.cos(Math.toRadians(r1_Y)), 100);
+
+        resultCalculation = resultCalculation + getString(R.string.r13_toothFootHeight, r13_h2N + "") + getString(R.string.textRN);
+
+        //------------------
+        //14. Общая высота зуба
+        //------------------
+
+        float r14_hN = r12_h1N + r13_h2N;
+
+        resultCalculation = resultCalculation + getString(R.string.r14_toothHeightTotal, r14_hN + "") + getString(R.string.textRN);
+
+        //-------------------
+        //15. Радиус закругления вершин зубьев
+        //-------------------
+
+        float r15_rad1 = m_gearModule * 0.4f;
+
+        resultCalculation = resultCalculation + getString(R.string.r15_radiusTopTooth, r15_rad1 + "") + getString(R.string.textRN);
+
+        //-------------------
+        //16. Радиус закругления впадин
+        //-------------------
+
+        float r16_rad2 = m_gearModule * 0.2f;
+
+        resultCalculation = resultCalculation + getString(R.string.r16_radiusDepressions, r16_rad2 + "") + getString(R.string.textRN);
+
+        //-------------------
+        //17. Диаметр калибра для контроля толщины зуба гребенки
+        //-------------------
+
+        float r17_dCalibre = getTrunc(((r2_t - r7_Sv) * Math.tan(Math.toRadians((90 - r11_aiN) / 2))), 1000);
+
+        resultCalculation = resultCalculation + getString(R.string.r17_diameterCalibre, r17_dCalibre + "");
+
+        //-------------------
+        //18. Конструктивные размеры зуборезной гребенки
+        //-------------------
+
+
+
+
 
 
 

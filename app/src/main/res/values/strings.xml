@@ -56,8 +56,8 @@ Kharkiv, 2022"</string>
     <string name="r7_heightToothTop">7. Tooth thickness at the top of the comb S<![CDATA[<sub><small>t</small></sub>]]> = %1$s mm;</string>
     <string name="r8_flankingAngle">8. Flanking angle α\'<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm;</string>
     <string name="r9_distance">9. Distance from the dividing line to the beginning of flanking:<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;&nbsp;- the distance from the dividing line to the beginning of flanking in the main plane h<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm,<![CDATA[<br>]]>
-        Distance from dividing line to the beginning of flanking h\'<![CDATA[<sub><small>f</small></sub>]]> = 1.361 mm;</string>
+        "    "- the distance from the dividing line to the beginning of flanking in the main plane h<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm,<![CDATA[<br>]]>
+        Distance from dividing line to the beginning of flanking h\'<![CDATA[<sub><small>f</small></sub>]]> = %2$s mm;</string>
     <string name="r10_widthBetweenTeeth">10. Width of the cavity between the teeth at the beginning of flanking S<![CDATA[<sub><small>f</small></sub>]]> = %1$s mm;</string>
     <string name="r11_profileAngle"><![CDATA[<b>Calculation of tooth profile in normal plane.</b><br>]]>
         11. Profile angle α<![CDATA[<sub><small>iN</small></sub>]]> = %1$s°;</string>
@@ -69,14 +69,14 @@ Kharkiv, 2022"</string>
     <string name="r17_diameterCalibre">17. Diameter of the calibre to control the tooth thickness of the comb d = %1$s mm;</string>
     <string name="r18_moduleNotStandard">The selected module is not standard. The design dimensions can only be obtained for standard modules.</string>
     <string name="r18_moduleStandard"><![CDATA[<b>Design dimensions of the toothbrush:</b><br>]]>
-        &nbsp;&nbsp;&nbsp;t = %1$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;H = %2$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;B = %3$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;L = %4$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;Z = %5$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;a = %6$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;a<![CDATA[<sub><small>1</small></sub>]]>  = %7$s mm,<![CDATA[<br>]]>
-        &nbsp;&nbsp;&nbsp;K = %8$s mm;<![CDATA[<br>]]></string>
+        "    "t = %1$s mm,<![CDATA[<br>]]>
+        "    "H = %2$s mm,<![CDATA[<br>]]>
+        "    "B = %3$s mm,<![CDATA[<br>]]>
+        "    "L = %4$s mm,<![CDATA[<br>]]>
+        "    "Z = %5$s mm,<![CDATA[<br>]]>
+        "    "a = %6$s mm,<![CDATA[<br>]]>
+        "    "a<![CDATA[<sub><small>1</small></sub>]]>  = %7$s mm,<![CDATA[<br>]]>
+        "    "K = %8$s mm;<![CDATA[<br>]]></string>
     <string name="r19_sharpeningAngle"><![CDATA[<b>Definition of sharpening angles:</b><br>]]>
         Side rear angle α<![CDATA[<sub><small>b</small></sub>]]> = %1$s°;<![CDATA[<br>]]>
         Front angle on side cutting edges γ<![CDATA[<sub><small>1</small></sub>]]> = %1$s°;</string>
