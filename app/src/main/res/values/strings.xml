@@ -79,7 +79,7 @@ Kharkiv, 2022"</string>
         "    "K = %8$s mm;<![CDATA[<br>]]></string>
     <string name="r19_sharpeningAngle"><![CDATA[<b>Definition of sharpening angles:</b><br>]]>
         Side rear angle α<![CDATA[<sub><small>b</small></sub>]]> = %1$s°;<![CDATA[<br>]]>
-        Front angle on side cutting edges γ<![CDATA[<sub><small>1</small></sub>]]> = %1$s°;</string>
+        Front angle on side cutting edges γ<![CDATA[<sub><small>1</small></sub>]]> = %2$s°;</string>
     <string name="r19_bigModule">Since the module is larger than 10 mm we use a second sharpening method.<![CDATA[<br>]]>
         Circle diameter D = %1%s mm;<![CDATA[<br>]]>
         Groove width b = %2$s mm;<![CDATA[<br>]]>
@@ -89,37 +89,37 @@ Kharkiv, 2022"</string>
     
     
     <string-array name="r18_standardModule">
-        <item>1</item>
+        <item>1.0</item>
         <item>1.25</item>
         <item>1.5</item>
         <item>1.75</item>
-        <item>2</item>
+        <item>2.0</item>
         <item>2.25</item>
         <item>2.5</item>
         <item>2.75</item>
-        <item>3</item>
+        <item>3.0</item>
         <item>3.25</item>
         <item>3.5</item>
         <item>3.75</item>
-        <item>4</item>
+        <item>4.0</item>
         <item>4.25</item>
         <item>4.5</item>
-        <item>5</item>
+        <item>5.0</item>
         <item>5.5</item>
-        <item>6</item>
+        <item>6.0</item>
         <item>6.5</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>18</item>
-        <item>20</item>
+        <item>7.0</item>
+        <item>8.0</item>
+        <item>9.0</item>
+        <item>10.0</item>
+        <item>11.0</item>
+        <item>12.0</item>
+        <item>13.0</item>
+        <item>14.0</item>
+        <item>15.0</item>
+        <item>16.0</item>
+        <item>18.0</item>
+        <item>20.0</item>
     </string-array>
     <string-array name="r18_t">
         <item>3.142</item>

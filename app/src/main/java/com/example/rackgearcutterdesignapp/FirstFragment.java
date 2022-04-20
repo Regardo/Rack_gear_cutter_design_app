@@ -1,5 +1,6 @@
 package com.example.rackgearcutterdesignapp;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.rackgearcutterdesignapp.databinding.FragmentFirstBinding;
 
+import java.lang.reflect.Array;
 import java.time.Year;
+import java.util.Arrays;
 import java.util.IllegalFormatCodePointException;
 
 public class FirstFragment extends Fragment {
@@ -324,31 +327,53 @@ public class FirstFragment extends Fragment {
 
         float r17_dCalibre = getTrunc(((r2_t - r7_Sv) * Math.tan(Math.toRadians((90 - r11_aiN) / 2))), 1000);
 
-        resultCalculation = resultCalculation + getString(R.string.r17_diameterCalibre, r17_dCalibre + "");
+        resultCalculation = resultCalculation + getString(R.string.r17_diameterCalibre, r17_dCalibre + "") + getString(R.string.textRN);
 
         //-------------------
         //18. Конструктивные размеры зуборезной гребенки
         //-------------------
 
+        Resources resources = getResources();
 
+        int r18_standardModule = Arrays.asList(resources.getStringArray(R.array.r18_standardModule)).indexOf(m_gearModule + "");
 
+        if (r18_standardModule == -1) {
+            resultCalculation = resultCalculation + getString(R.string.r18_moduleNotStandard) + getString(R.string.textRN);
+        }
+        else {
+            String r18_t = Arrays.asList(resources.getStringArray(R.array.r18_t)).get(r18_standardModule);
+            String r18_H = Arrays.asList(resources.getStringArray(R.array.r18_H)).get(r18_standardModule);
+            String r18_B = Arrays.asList(resources.getStringArray(R.array.r18_B)).get(r18_standardModule);
+            String r18_L = Arrays.asList(resources.getStringArray(R.array.r18_L)).get(r18_standardModule);
+            String r18_Z = Arrays.asList(resources.getStringArray(R.array.r18_Z)).get(r18_standardModule);
+            String r18_a = Arrays.asList(resources.getStringArray(R.array.r18_a)).get(r18_standardModule);
+            String r18_a1 = Arrays.asList(resources.getStringArray(R.array.r18_a1)).get(r18_standardModule);
+            String r18_K = Arrays.asList(resources.getStringArray(R.array.r18_K)).get(r18_standardModule);
 
+            resultCalculation = resultCalculation + getString(R.string.r18_moduleStandard, r18_t, r18_H, r18_B, r18_L, r18_Z, r18_a, r18_a1, r18_K) + getString(R.string.textRN);
+        }
 
+        //-----------------
+        //19. Определение углов заточки
+        //-----------------
 
+        float r19_ab = getTrunc(Math.atan(getTrunc((Math.sin(Math.toRadians(r11_av)) * Math.sin(Math.toRadians(a_angleEngagement)) * Math.cos(Math.toRadians(r1_Y))) / (Math.cos(Math.toRadians(r11_av + r1_Y)) + ( (Math.sin(Math.toRadians(a_angleEngagement)) * Math.sin(Math.toRadians(a_angleEngagement))) * Math.sin(Math.toRadians(r11_av)) * Math.sin(Math.toRadians(r1_Y)) )), 1000)), 100);
+        float r19_y1 = getTrunc(( Math.atan( Math.tan(Math.toRadians(r1_Y)) * Math.sin(Math.toRadians(r11_av)))), 100);
 
+        resultCalculation = resultCalculation + getString(R.string.r19_sharpeningAngle, r19_ab + "", r19_y1 + "") + getString(R.string.textRN);
 
+        if (m_gearModule >= 10) {
+            float r19_D = 0;
+            float r19_b = 0;
+            float r19_y = 0;
+            float r19_yc = 0;
+            if (m_gearModule >= 10 && m_gearModule <= 14) {r19_D = 35; r19_b = 7; r19_y = 11.53f;r19_yc = 13.75f;}
+            else if (m_gearModule > 14 && m_gearModule <= 17) {r19_D = 50; r19_b = 10; r19_y = 11.53f;r19_yc = 13.75f;}
+            else if (m_gearModule > 17 && m_gearModule <= 21) {r19_D = 60; r19_b = 13; r19_y = 12.53f;r19_yc = 14.75f;}
+            else if (m_gearModule > 21 && m_gearModule <= 24) {r19_D = 70; r19_b = 15; r19_y = 12.42f;r19_yc = 14.63f;}
 
-
-
-
-
-
-
-
-
-
-
-
+            resultCalculation = resultCalculation + getString(R.string.r19_bigModule, r19_D + "", r19_b + "", r19_y + "", r19_yc + "") + getString(R.string.textRN);
+        }
 
         return resultCalculation;
     }
